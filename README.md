@@ -4,13 +4,11 @@ de: Raúl Pérez Gutiérrez
 
 INSTRUCCIONES
 
-Importas la base de datos, seguidamente para que la conexión funcione tiene que se usuario "root" y contraseña vacía en caso de no ser esos credenciales peudes a acceder a ../app/clases/conexionBd.php y cambiarlos.
-Se está usando en este proyecto mySql no mariaDb
-La base de datos viene con los datos iniciales que se mostraron en la defensa del proyecto
+Importas la base de datos que se encuentra en la carpeta de sql, en esta se creará la base de datos y las tablas con los datos que se mostraron en la defensa, seguidamente para la conexión el programa tiene de credendiales: usuario "root" y contraseña vacía, en caso de no ser esos credenciales puedes acceder a ../app/clases/conexionBd.php y cambiarlos. La conexión es para MySql
 
 La contraseña para acceder al modo administrador que predeterminadas de la página son: usuario: "root" contraseña: "root"
 
-IMAGENES
+IMÁGENES
 
 <img width="1910" height="1070" alt="image" src="https://github.com/user-attachments/assets/9675b31a-6cb3-4c95-8957-b04606af56b2" />
 <img width="1919" height="577" alt="image" src="https://github.com/user-attachments/assets/e22179ff-9879-4d8f-b625-caa00a00e4be" />
