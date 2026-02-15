@@ -1,0 +1,685 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 15 ene 2026, 11:23:38
+    Author     : raulp
+*/
+
+
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDF6F9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*  1. HEADER */
+
+.header {
+    background-color: #EDF6F9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* CABECERA / HEADER */
+
+.nombre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 40px;
+    box-sizing: border-box;
+}
+
+/* Zona Izquierda */
+.zona-logo {
+    flex: 1;
+}
+
+/* Zona Centro */
+.zona-titulo {
+    flex: 1;
+    text-align: center;
+}
+
+.zona-titulo h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #006D77;
+}
+
+/* Zona Derecha */
+.zona-contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #555;
+}
+
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 2. BARRA DE NAVEGACIÓN */
+nav {
+    background-color: #006D77;
+    width: 100%;
+}
+
+.indice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.indice > li > a {
+    text-decoration: none;
+    color: #F4F7F5;
+    font-size: 1em;
+    padding: 10px 10px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.indice > li > a:hover {
+    color: #E9C46A;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    background-color: #006D77;
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.submenu a {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,255);
+    color: white;
+}
+
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+.submenu a:hover {
+    background-color: #0d8395;
+    color: white;
+}
+
+.indice > li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* BODY */
+
+.contenedor-body{
+    text-align: center;
+}
+
+.contenedor-body p, h1{
+    color: #006D77;
+    font-weight: bold;
+}
+
+.titulo-body{
+    padding: 20px;
+}
+
+
+/* Contenedores viajes */
+.contenedor-viajes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.8);
+}
+
+.imagen-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tipo-viaje{
+    font-weight: bold;
+    color: #2A9D8F;
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid grey;
+    border-bottom:  1px solid grey;
+    padding: 6px 0;
+    margin: 9px 0;
+    color: grey;
+    font-size: 0.9em;
+}
+
+.datos p:last-child{
+    text-align: end;
+}
+
+.footer-card {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.precios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.precio-grande{
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.precio-chico{
+    font-size: 0.8em;
+    color: grey;
+    margin-top: 0px;
+    font-weight: 500;
+}
+
+.boton{
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: #F4A261;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.boton:hover{
+    background-color: #e76f51;
+}
+
+/* --- ZONA DE ADMINISTRACIÓN --- */
+.admin-cab {
+    width: 95%;
+    margin: 40px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.admin-cab h1 {
+    color: #006D77;
+    margin: 0;
+    font-size: 1.8em;
+    display: flex;
+}
+
+
+.btn-nuevo {
+    background-color: #006D77;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-nuevo:hover {
+    background-color: #005f6b;
+    transform: translateY(-2px);
+}
+
+.tabla-viajes {
+    width: 95%;
+    margin: 20px auto 50px auto;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #006D77;
+}
+
+.tabla-viajes th,
+.tabla-viajes td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.tabla-viajes th {
+    background-color: #0e444c;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.tabla-viajes td {
+    background-color: #006D77;
+    color: white;
+
+}
+
+.tabla-viajes td:last-child {
+    text-align: center;
+    padding: 10px 5px;
+
+}
+
+.btn-editar,
+.btn-eliminar {
+    display: inline-block;
+    width: 80px;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-editar {
+    background-color: #ff9800;
+    color: #000;
+}
+
+.btn-editar:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+.btn-eliminar {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+}
+
+/* FORMULARIO */
+
+.formulario {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.titulo-form {
+    color: #006D77;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.campo {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+
+.botones-accion {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+
+}
+
+.formulario .btn-guardar {
+    background-color: #006D77;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.formulario .btn-guardar:hover {
+    background-color: #005666;
+}
+
+.btn-cancelar {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.btn-cancelar:hover {
+    text-decoration: underline;
+    color: #b71c1c;
+}
+
+/* VER VIAJE */
+
+.contenedor-viaje-detalle {
+    display: flex;
+    gap: 40px;
+    max-width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.imagen-esp {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagen-esp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contenido-detalle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitulo-detalle {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2A9D8F;
+    padding-bottom: 5px;
+}
+
+.texto-descripcion {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.datos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: #EDF6F9; 
+    padding: 20px;
+}
+
+.dato-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta {
+    font-size: 0.9em;
+    color: #006D77;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.valor {
+    font-size: 1.1em;
+    color: #264653;
+}
+
+.bloque-precio {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.etiqueta-precio {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.precio-grande {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.presupuesto-info {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.btn-volver {
+    display: inline-block;
+    color: #006D77;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.btn-volver:hover {
+    color: #F4A261;
+}
+
+
+/* FORMULARIO LOGIN */
+
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #F4F7F5;
+}
+
+.login-container {
+    width: 360px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #006D77;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.texto-caja {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.texto-caja label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.texto-caja input.form-clave {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.alerta-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+
+.btn-login {
+    width: 100%;
+    background-color: #006D77;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #0d8395;
+}
+
+
+
+
+
+/* FOOTER */
+.footer {
+    background-color: #1a3c40;
+    color: #ccc;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-logo h2 { color: #E9C46A; margin: 0; }
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid #446;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-group h5 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-group a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+.footer-group a:hover { color: #E9C46A; }
+
+
+.contenedor-legal {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.contenedor-legal h1 {
+    color: #006D77;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
